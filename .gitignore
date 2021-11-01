@@ -6,3 +6,9 @@ testWS/Servers/
 testWS/FamilyRest/target/
 
 .metadata/
+
+testWS/rest-client/.classpath
+
+testWS/rest-client/.settings/
+
+testWS/rest-client/.project
