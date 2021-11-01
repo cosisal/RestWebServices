@@ -19,9 +19,9 @@ public class Mom implements Parent {
 
 	@Override
 	@GET
-	@Path("latte/{ml}")
+	@Path("latte/{ml}/{dolce}")
 	@Produces(MediaType.TEXT_HTML)
-	public String giveMilk(@PathParam("ml") Integer ml) {
+	public String giveMilk(@PathParam("ml") Integer ml, @PathParam("dolce") Boolean dolce) {
 		return "Ho dato " + ml.toString() + " ml di latte al bambino";
 	}
 
@@ -30,7 +30,7 @@ public class Mom implements Parent {
 	@Path("pappa/{gr}")
 	@Produces(MediaType.TEXT_HTML)
 	public String giveBabyFood(@PathParam("gr") Integer gr) {
-		return "Ho dato " + gr.toString() + " gr di pappa al bambino";
+		return "Ho dato " + gr.toString() + " gr di pappa al bambino!";
 	}
 
 	@Override
