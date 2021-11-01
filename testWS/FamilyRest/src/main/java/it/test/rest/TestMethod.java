@@ -37,7 +37,6 @@ public class TestMethod {
 	}
 
 	@GET
-<<<<<<< HEAD
 	@Path("list")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<String> listFiles() {
@@ -66,31 +65,4 @@ public class TestMethod {
 		return response.build();
 	}
 
-=======
-    @Path("download")
-    @Produces(MediaType.APPLICATION_OCTET_STREAM)
-    public Response downloadFileWithGet(@QueryParam("file") String file) {
-        System.out.println("Download file "+file);
-        File fileDownload = new File("/home/salvo/Scaricati/" + file);
-        ResponseBuilder response = Response.ok((Object) fileDownload);
-        response.header("Content-Disposition", "attachment;filename=" + file);
-        return response.build();
-    }
-	
-	@GET
-    @Path("list")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<String> listFiles() {
-        List<String> listFiles = new ArrayList<>();
-//        File fileFolder = new File(Config.UPLOAD_FOLDER);
-        File fileFolder = new File("/home/salvo/Scaricati/");
-        File[] list = fileFolder.listFiles();
-        for (File f: list) {
-            if (!f.isDirectory()) {
-                listFiles.add(f.getName());
-            }
-        }
-        return listFiles;
-    }
->>>>>>> main
 }
