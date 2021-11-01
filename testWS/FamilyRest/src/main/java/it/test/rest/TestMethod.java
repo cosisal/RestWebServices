@@ -1,6 +1,8 @@
 package it.test.rest;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -29,5 +31,21 @@ public class TestMethod {
         ResponseBuilder response = Response.ok((Object) fileDownload);
         response.header("Content-Disposition", "attachment;filename=" + file);
         return response.build();
+    }
+	
+	@GET
+    @Path("list")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<String> listFiles() {
+        List<String> listFiles = new ArrayList<>();
+//        File fileFolder = new File(Config.UPLOAD_FOLDER);
+        File fileFolder = new File("/home/salvo/Scaricati/");
+        File[] list = fileFolder.listFiles();
+        for (File f: list) {
+            if (!f.isDirectory()) {
+                listFiles.add(f.getName());
+            }
+        }
+        return listFiles;
     }
 }
