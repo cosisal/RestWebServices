@@ -1,0 +1,15 @@
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/exceptions/AcesApiException.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesUtenteServiceApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesClienteSettingsApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/dtos/Cpk.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/response/AcesApiResponse.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesUtenteSettingsApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/response/AcesCpkApiResponse.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesConsumiUtenteApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesProfiliUtenteApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/dtos/EsitoBaseDto.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesProfiliApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesCpkSettingsApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/response/EsitoBaseResponse.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/rest/IAcesServiceSettingsApi.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesCommons/src/main/java/it/infocamere/aces/commons/api/dtos/CpkListDto.java

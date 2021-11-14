@@ -1,0 +1,10 @@
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/impl/AcesCpkDaoEJB.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/remote/AcesCpkDaoRemote.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/exceptions/EjbLookupException.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/local/AcesConsumiUtenteDaoLocal.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/impl/GenericDaoEJB.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/AcesCpkDao.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/local/AcesCpkDaoLocal.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/utils/EJBLookup.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/impl/AcesConsumiUtenteDaoEJB.java
+/home/salvo/WORSPACES/RestWebServices/testWS/aces-e/acesEjb/src/main/java/it/infocamere/aces/acese/ejb/dao/AcesConsumiUtenteDao.java

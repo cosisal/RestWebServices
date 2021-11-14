@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ACES_PU" transaction-type="JTA">
+<!-- 	    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+      	<jta-data-source>java:jboss/datasources/jdbc/acesDS</jta-data-source>
+      	
+		<class>it.infocamere.aces.acesJpa.entities.impl.AcesConsumiUtente</class>
+		<class>it.infocamere.aces.acesJpa.entities.impl.AcesConsumiUtentePK</class>
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornituraConfiguration</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornituraConfigurationPK</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornitureInfocenter</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.LogFornitureInfocenter</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.LogFornitureInfocenterPK</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.LottiFornitura</class> -->
+<!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.LottiFornituraPK</class> -->
+		
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+       <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<!-- Parametro per dev - impostare a false in fase di release -->
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="hibernate.connection.release_mode" value="after_statement" />
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+			<property name="hibernate.cache.use_query_cache" value="false" />
+			<property name="hibernate.validator.apply_to_ddl" value="false" />
+			<property name="hibernate.validator.autoregister_listeners" value="false" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+			<!-- Utilizzato da Mysql per le pk autoincrement -->
+			<property name="hibernate.id.new_generator_mappings" value="false"/>
+		</properties>
+	
+	</persistence-unit>
+</persistence>

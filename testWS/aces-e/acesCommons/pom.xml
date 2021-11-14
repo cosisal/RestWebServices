@@ -1,0 +1,215 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>it.infocamere.aces.aces-e</groupId>
+		<artifactId>aces-e</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>acesCommons</artifactId>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<!-- <spring.version>5.1.3.RELEASE</spring.version> -->
+		<!-- <cglib.version>3.2.10</cglib.version> -->
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+	</properties>
+	<dependencies>
+		<!-- <dependency> -->
+		<!-- <groupId>javax.annotation</groupId> -->
+		<!-- <artifactId>javax.annotation-api</artifactId> -->
+		<!-- <version>1.3.2</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- Spring core & mvc -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-context</artifactId> -->
+		<!-- <version>${spring.version}</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-webmvc</artifactId> -->
+		<!-- <version>${spring.version}</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-test</artifactId> -->
+		<!-- <version>${spring.version}</version> -->
+		<!-- <type>jar</type> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>2.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>2.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>2.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-jaxb</artifactId>
+			<version>2.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>2.35</version>
+			<!-- <exclusions> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>javassist</artifactId> -->
+			<!-- <groupId>javassist</groupId> -->
+			<!-- </exclusion> -->
+			<!-- </exclusions> -->
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>javax.annotation</groupId> -->
+		<!-- <artifactId>javax.annotation-api</artifactId> -->
+		<!-- <version>1.2</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.hk2.external</groupId> -->
+		<!-- <artifactId>aopalliance-repackaged</artifactId> -->
+		<!-- <version>2.5.0</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.javassist</groupId> -->
+		<!-- <artifactId>javassist</artifactId> -->
+		<!-- <version>3.20.0-GA</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.hk2.external</groupId> -->
+		<!-- <artifactId>javax.inject</artifactId> -->
+		<!-- <version>2.5.0-b62</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>javax.servlet-api</artifactId> -->
+		<!-- <version>3.0.1</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.xml.bind</groupId> -->
+		<!-- <artifactId>jaxb-api</artifactId> -->
+		<!-- <version>2.2.7</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.jersey.bundles.repackaged</groupId> -->
+		<!-- <artifactId>jersey-guava</artifactId> -->
+		<!-- <version>2.25.1</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.osgi</groupId> -->
+		<!-- <artifactId>org.osgi.core</artifactId> -->
+		<!-- <version>4.2.0</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.hk2</groupId> -->
+		<!-- <artifactId>osgi-resource-locator</artifactId> -->
+		<!-- <version>1.0.1</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.persistence</groupId> -->
+		<!-- <artifactId>persistence-api</artifactId> -->
+		<!-- <version>1.0</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.validation</groupId> -->
+		<!-- <artifactId>validation-api</artifactId> -->
+		<!-- <version>1.1.0.Final</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.projectlombok</groupId> -->
+		<!-- <artifactId>lombok</artifactId> -->
+		<!-- <version>1.18.22</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.jersey.media</groupId> -->
+		<!-- <artifactId>jersey-media-json-jackson</artifactId> -->
+		<!-- <version>2.35</version> -->
+		<!-- </dependency> -->
+		<!-- CGLib for @Configuration -->
+		<!-- <dependency> -->
+		<!-- <groupId>cglib</groupId> -->
+		<!-- <artifactId>cglib-nodep</artifactId> -->
+		<!-- <version>${cglib.version}</version> -->
+		<!-- <scope>runtime</scope> -->
+		<!-- </dependency> -->
+		<!-- Servlet Spec -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>javax.servlet-api</artifactId> -->
+		<!-- <version>3.1.0</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- Thymeleaf -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.thymeleaf</groupId> -->
+		<!-- <artifactId>thymeleaf-spring5</artifactId> -->
+		<!-- <version>3.0.11.RELEASE</version> -->
+		<!-- <exclusions> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>javassist</artifactId> -->
+		<!-- <groupId>org.javassist</groupId> -->
+		<!-- </exclusion> -->
+		<!-- </exclusions> -->
+		<!-- </dependency> -->
+		<!-- Logging -->
+		<!-- <dependency> -->
+		<!-- <groupId>log4j</groupId> -->
+		<!-- <artifactId>log4j</artifactId> -->
+		<!-- <version>1.2.14</version> -->
+		<!-- <scope>runtime</scope> -->
+		<!-- </dependency> -->
+		<!-- JSR-330 for @Inject -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.inject</groupId> -->
+		<!-- <artifactId>javax.inject</artifactId> -->
+		<!-- <version>1</version> -->
+		<!-- </dependency> -->
+		<!-- Commons Upload for File upload -->
+		<!-- <dependency> -->
+		<!-- <groupId>commons-fileupload</groupId> -->
+		<!-- <artifactId>commons-fileupload</artifactId> -->
+		<!-- <version>1.4</version> -->
+		<!-- <scope>runtime</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>commons-io</groupId> -->
+		<!-- <artifactId>commons-io</artifactId> -->
+		<!-- <version>2.6</version> -->
+		<!-- </dependency> -->
+		<!-- Jackson JSON Mapper -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.core</groupId> -->
+		<!-- <artifactId>jackson-databind</artifactId> -->
+		<!-- <version>2.9.8</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.12</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+	</dependencies>
+</project>

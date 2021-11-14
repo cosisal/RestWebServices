@@ -1,0 +1,10 @@
+it/infocamere/aces/acese/ejb/utils/EJBLookup.class
+it/infocamere/aces/acese/ejb/dao/impl/GenericDaoEJB.class
+it/infocamere/aces/acese/ejb/dao/local/AcesCpkDaoLocal.class
+it/infocamere/aces/acese/ejb/dao/local/AcesConsumiUtenteDaoLocal.class
+it/infocamere/aces/acese/ejb/exceptions/EjbLookupException.class
+it/infocamere/aces/acese/ejb/dao/impl/AcesCpkDaoEJB.class
+it/infocamere/aces/acese/ejb/dao/AcesCpkDao.class
+it/infocamere/aces/acese/ejb/dao/impl/AcesConsumiUtenteDaoEJB.class
+it/infocamere/aces/acese/ejb/dao/AcesConsumiUtenteDao.class
+it/infocamere/aces/acese/ejb/dao/remote/AcesCpkDaoRemote.class
