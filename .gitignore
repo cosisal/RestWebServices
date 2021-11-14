@@ -12,3 +12,13 @@ testWS/rest-client/.classpath
 testWS/rest-client/.settings/
 
 testWS/rest-client/.project
+
+testWS/testSpringBoot/.settings/
+
+testWS/testSpringBoot/target/
+
+testWS/testSpringBoot/.project
+
+testWS/testSpringBoot/HELP.md
+
+testWS/testSpringBoot/.classpath
