@@ -9,14 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import it.infocamere.aces.acesJpa.entities.AcesEntity;
+import it.infocamere.aces.acesJpa.entities.AcesCpkEntity;
 import lombok.Data;
 
 @Entity
-@Table(name = "aces_cpk")
+@Table(name = "aces.aces_cpk")
 @NamedQuery(name = "AcesCpk.findAll", query = "SELECT a FROM AcesCpk a")
 @Data
-public class AcesCpk extends AcesEntity implements Serializable {
+public class AcesCpk extends AcesCpkEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -28,6 +28,9 @@ public class AcesCpk extends AcesEntity implements Serializable {
 	
 	@Column(name = "cpk")
 	private String cpk;
+	
+	@Column(name = "description")
+	private String description;
 	
 	@Column(name = "user_id_inserimento")
 	private String userIdInserimento;

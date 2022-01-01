@@ -6,6 +6,8 @@
       	
 		<class>it.infocamere.aces.acesJpa.entities.impl.AcesConsumiUtente</class>
 		<class>it.infocamere.aces.acesJpa.entities.impl.AcesConsumiUtentePK</class>
+		<class>it.infocamere.aces.acesJpa.entities.impl.AcesCpk</class>
+		<class>it.infocamere.aces.acesJpa.entities.impl.AcesCpkPK</class>
 <!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornituraConfiguration</class> -->
 <!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornituraConfigurationPK</class> -->
 <!-- 		<class>it.infocamere.incm.incme.incmJpa.entities.impl.FornitureInfocenter</class> -->

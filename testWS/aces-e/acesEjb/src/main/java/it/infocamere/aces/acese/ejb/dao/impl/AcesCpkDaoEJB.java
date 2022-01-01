@@ -1,5 +1,6 @@
 package it.infocamere.aces.acese.ejb.dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.ConcurrencyManagement;
@@ -9,7 +10,9 @@ import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
-import javax.persistence.Query;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import it.infocamere.aces.acesJpa.entities.impl.AcesCpk;
 import it.infocamere.aces.acese.ejb.dao.local.AcesCpkDaoLocal;
@@ -22,33 +25,52 @@ import it.infocamere.aces.commons.api.dtos.CpkListDto;
 @Remote(AcesCpkDaoRemote.class)
 @ConcurrencyManagement(ConcurrencyManagementType.BEAN)
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
-public class AcesCpkDaoEJB extends GenericDaoEJB<AcesCpk> implements AcesCpkDaoLocal, AcesCpkDaoRemote {
+public class AcesCpkDaoEJB
+//		extends GenericDaoEJB<AcesCpk> 
+		implements AcesCpkDaoLocal, AcesCpkDaoRemote {
 
 //	private static final long serialVersionUID = 1L;
-
-	public AcesCpkDaoEJB(Class<AcesCpk> entCls) {
-		super(entCls);
-		// TODO Auto-generated constructor stub
-	}
+	
+	@PersistenceContext(unitName = "ACES_PU")
+	protected EntityManager em;
+	
+//	public AcesCpkDaoEJB(Class<AcesCpk> entCls) {
+//		super(entCls);
+//	}
 
 	@Override
 	public CpkListDto getCpkList() {
-		
-		CpkListDto cpkListDto = new CpkListDto();	
+
+		CpkListDto cpkListDto = new CpkListDto();
 		System.out.println("Sono nell'implementazione dell'EJB");
 //		ArrayList<AcesCpk> cpkList = new ArrayList<AcesCpk>();
+
+//		cpkListDto.getCpkList().add(cpk);
+		List<Cpk> cpkList = cpkListDto.getCpkList();
 		
-		Cpk cpk = new Cpk();
+		TypedQuery<AcesCpk> tQuery = this.em.createQuery("from AcesCpk", AcesCpk.class);
+		List<AcesCpk> resultList = tQuery.getResultList();
 		
-		cpk.setCdp("PROVA");
 		
-		cpkListDto.getCpkList().add(cpk);
-		
-//		Query query = this.getEntityManager().createNativeQuery("Select * from aces.aces_cpk");
+		for (AcesCpk acesCpk : resultList) {
+			Cpk cpk = new Cpk();
+			cpk.setIdAcesCpk(acesCpk.getIdAcesCpkPk().getIdAcesCpk());
+			cpk.setCdp(acesCpk.getCdp());
+			cpk.setCpk(acesCpk.getCpk());
+			cpk.setDescription(acesCpk.getDescription());
+			cpk.setUserIdInserimento("ACES-E");
+			cpk.setDtOraInserimento(new Date());
+			cpk.setUserIdUltModifica("ACES-E");
+			cpk.setDtOraUltModifica(new Date());
+			cpkList.add(cpk);
+		}
+//		Query query = this.em.createNativeQuery("Select * from aces.aces_cpk");
+//		
 //		List resultList = query.getResultList();
+//		
+//		TODO: fare il cast del risultato della query in AcesCpkDao
+		
 		return cpkListDto;
 	}
-	
-	
-	
+
 }

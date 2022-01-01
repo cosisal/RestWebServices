@@ -64,3 +64,11 @@ testWS/springMvcProva/.settings/
 testWS/springMvcProva/target/
 
 testWS/springMvcProva/.classpath
+
+testWS/aces-e/acesCommons/target/
+
+testWS/aces-e/acesEjb/target/
+
+testWS/aces-e/acesJpa/target/
+
+testWS/aces-e/acesEar/target/
