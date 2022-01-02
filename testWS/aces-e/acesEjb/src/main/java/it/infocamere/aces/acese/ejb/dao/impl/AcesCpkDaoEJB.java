@@ -1,6 +1,6 @@
 package it.infocamere.aces.acese.ejb.dao.impl;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.ejb.ConcurrencyManagement;
@@ -63,8 +63,6 @@ public class AcesCpkDaoEJB
 			cpkList.add(cpk);
 		}
 
-		// TODO: fare il cast del risultato della query in AcesCpkDao
-
 		return cpkListDto;
 	}
 
@@ -78,8 +76,8 @@ public class AcesCpkDaoEJB
 			acesCpk.setCdp(cpk.getCdp());
 			acesCpk.setCpk(cpk.getCpk());
 			acesCpk.setDescription(cpk.getDescription());
-			acesCpk.setDtOraInserimento(new Date());
-			acesCpk.setDtOraUltModifica(new Date());
+			acesCpk.setDtOraInserimento(LocalDateTime.now());
+			acesCpk.setDtOraUltModifica(LocalDateTime.now());
 			acesCpk.setUserIdInserimento("ACES-E");
 			acesCpk.setUserIdUltModifica("ACES-E");
 		}
