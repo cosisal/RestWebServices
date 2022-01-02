@@ -13,6 +13,7 @@ import it.infocamere.aces.acese.ejb.exceptions.EjbLookupException;
 import it.infocamere.aces.acese.ejb.utils.EJBLookup;
 import it.infocamere.aces.commons.api.dtos.Cpk;
 import it.infocamere.aces.commons.api.dtos.CpkListDto;
+import it.infocamere.aces.commons.api.dtos.EsitoBaseDto;
 import it.infocamere.aces.commons.api.exceptions.AcesApiException;
 import it.infocamere.aces.commons.api.response.AcesCpkApiResponse;
 import it.infocamere.aces.commons.api.response.EsitoBaseResponse;
@@ -51,6 +52,18 @@ public class CpkController implements IAcesCpkSettingsApi{
 		}
 		
 		return new AcesCpkApiResponse(cpkList).toResponse();
+	}
+	
+	@Override
+	public Response insertCpk(Cpk cpk) {
+		
+		try {
+			getRicercaEjb().insertCpk(cpk);
+		} catch (EjbLookupException e) {
+			return new EsitoBaseResponse(new AcesApiException(e)).toResponse();
+		}
+		
+		return new EsitoBaseResponse(new EsitoBaseDto(Boolean.TRUE)).toResponse();
 	}
 	
 	// Lookup EJB

@@ -5,13 +5,17 @@ import java.math.BigInteger;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Embeddable
 public class AcesCpkPk implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	@Column(name = "id_aces_cpk")
+//	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_aces_cpk", nullable = false)	
 	private BigInteger idAcesCpk;
 	
 	public AcesCpkPk() {

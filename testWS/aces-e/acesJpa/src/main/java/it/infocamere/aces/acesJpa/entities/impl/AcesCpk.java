@@ -1,11 +1,14 @@
 package it.infocamere.aces.acesJpa.entities.impl;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -16,12 +19,18 @@ import lombok.Data;
 @Table(name = "aces.aces_cpk")
 @NamedQuery(name = "AcesCpk.findAll", query = "SELECT a FROM AcesCpk a")
 @Data
+//@EqualsAndHashCode(callSuper=false)
 public class AcesCpk extends AcesCpkEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+		
+//	@EmbeddedId
+//	private AcesCpkPk idAcesCpkPk;
 	
-	@EmbeddedId
-	private AcesCpkPk idAcesCpkPk;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_aces_cpk", nullable = false)	
+	private BigInteger idAcesCpk;
 	
 	@Column(name = "cdp")
 	private String cdp;

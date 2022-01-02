@@ -30,10 +30,10 @@ public class AcesCpkDaoEJB
 		implements AcesCpkDaoLocal, AcesCpkDaoRemote {
 
 //	private static final long serialVersionUID = 1L;
-	
+
 	@PersistenceContext(unitName = "ACES_PU")
 	protected EntityManager em;
-	
+
 //	public AcesCpkDaoEJB(Class<AcesCpk> entCls) {
 //		super(entCls);
 //	}
@@ -43,34 +43,54 @@ public class AcesCpkDaoEJB
 
 		CpkListDto cpkListDto = new CpkListDto();
 		System.out.println("Sono nell'implementazione dell'EJB");
-//		ArrayList<AcesCpk> cpkList = new ArrayList<AcesCpk>();
 
-//		cpkListDto.getCpkList().add(cpk);
 		List<Cpk> cpkList = cpkListDto.getCpkList();
-		
+
 		TypedQuery<AcesCpk> tQuery = this.em.createQuery("from AcesCpk", AcesCpk.class);
 		List<AcesCpk> resultList = tQuery.getResultList();
-		
-		
+
 		for (AcesCpk acesCpk : resultList) {
 			Cpk cpk = new Cpk();
-			cpk.setIdAcesCpk(acesCpk.getIdAcesCpkPk().getIdAcesCpk());
+//			cpk.setIdAcesCpk(acesCpk.getIdAcesCpkPk().getIdAcesCpk());
+			cpk.setIdAcesCpk(acesCpk.getIdAcesCpk());
 			cpk.setCdp(acesCpk.getCdp());
 			cpk.setCpk(acesCpk.getCpk());
 			cpk.setDescription(acesCpk.getDescription());
-			cpk.setUserIdInserimento("ACES-E");
-			cpk.setDtOraInserimento(new Date());
-			cpk.setUserIdUltModifica("ACES-E");
-			cpk.setDtOraUltModifica(new Date());
+			cpk.setUserIdInserimento(acesCpk.getUserIdInserimento());
+			cpk.setDtOraInserimento(acesCpk.getDtOraInserimento());
+			cpk.setUserIdUltModifica(acesCpk.getUserIdUltModifica());
+			cpk.setDtOraUltModifica(acesCpk.getDtOraUltModifica());
 			cpkList.add(cpk);
 		}
-//		Query query = this.em.createNativeQuery("Select * from aces.aces_cpk");
-//		
-//		List resultList = query.getResultList();
-//		
-//		TODO: fare il cast del risultato della query in AcesCpkDao
-		
+
+		// TODO: fare il cast del risultato della query in AcesCpkDao
+
 		return cpkListDto;
+	}
+
+	@Override
+	public Cpk insertCpk(Cpk cpk) {
+		
+		AcesCpk acesCpk = new AcesCpk();
+		
+		if (cpk != null) {
+			
+			acesCpk.setCdp(cpk.getCdp());
+			acesCpk.setCpk(cpk.getCpk());
+			acesCpk.setDescription(cpk.getDescription());
+			acesCpk.setDtOraInserimento(new Date());
+			acesCpk.setDtOraUltModifica(new Date());
+			acesCpk.setUserIdInserimento("ACES-E");
+			acesCpk.setUserIdUltModifica("ACES-E");
+		}
+		
+//		EntityTransaction transaction = this.em.getTransaction();
+//		transaction.begin();
+		this.em.persist(acesCpk);
+		this.em.flush();
+//		transaction.commit();
+				
+		return cpk;
 	}
 
 }
