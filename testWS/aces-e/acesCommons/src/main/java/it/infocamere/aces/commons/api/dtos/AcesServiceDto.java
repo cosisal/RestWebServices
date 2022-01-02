@@ -12,11 +12,12 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 
 @Data
-public class Cpk {
-	BigInteger idAcesCpk;
-	String cdp;
-	String cpk;
-	String description;
+public class AcesServiceDto {
+	
+	BigInteger idAcesService;
+	BigInteger fkAcesCpk;
+	String serviceName;
+	String serviceDescription;
 	String userIdInserimento;
 	
 	@JsonSerialize(using = LocalDateTimeSerializer.class) 

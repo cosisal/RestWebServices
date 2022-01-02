@@ -11,7 +11,9 @@ import javax.naming.NamingException;
 import javax.rmi.PortableRemoteObject;
 
 import it.infocamere.aces.acese.ejb.dao.impl.AcesCpkDaoEJB;
+import it.infocamere.aces.acese.ejb.dao.impl.AcesServiceDaoEJB;
 import it.infocamere.aces.acese.ejb.dao.local.AcesCpkDaoLocal;
+import it.infocamere.aces.acese.ejb.dao.local.AcesServiceDaoLocal;
 import it.infocamere.aces.acese.ejb.exceptions.EjbLookupException;
 
 public class EJBLookup {
@@ -23,7 +25,8 @@ public class EJBLookup {
 		//mappa ejb per lookup locale
 		
 		//test EJB
-		ejbMapLocal.put(AcesCpkDaoEJB.class.getName(), "java:global/acesEar/acesEjb/AcesCpkDaoEJB!" + AcesCpkDaoLocal.class.getName());	
+		ejbMapLocal.put(AcesCpkDaoEJB.class.getName(), "java:global/acesEar/acesEjb/AcesCpkDaoEJB!" + AcesCpkDaoLocal.class.getName());
+		ejbMapLocal.put(AcesServiceDaoEJB.class.getName(), "java:global/acesEar/acesEjb/AcesServiceDaoEJB!" + AcesServiceDaoLocal.class.getName());
 //		ejbMapLocal.put(RicercaEjbImpl.class.getName(), "java:global/incmEar/incmEjb/RicercaEjbImpl!" + IRicercaEjb.class.getName());
 //		ejbMapLocal.put(FornitureSettingEjbImpl.class.getName(), "java:global/incmEar/incmEjb/FornitureSettingEjbImpl!" + IFornitureSettingEjb.class.getName());
 		
